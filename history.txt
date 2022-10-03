@@ -1,0 +1,3 @@
+#V2
+clarinet check
+(contract-call?  .practice-map-keyword update-employee-status u1  false)
