@@ -31,7 +31,8 @@
 (define-read-only (read-employee-status (employee-id uint) (block uint))
 (at-block 
     (unwrap! (get-block-info? id-header-hash block) (err none))
-    (ok (map-get? Employees employee-id))
+    (ok (get employeed (map-get? Employees employee-id)))
+    
 )
 )
 

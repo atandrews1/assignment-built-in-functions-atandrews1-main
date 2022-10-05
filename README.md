@@ -73,7 +73,7 @@ There is a fixed map `Employees` for this task and it would be used to implement
 
 **Note:** you might see a different order of response - that is correct why because map value is a tuple and the tuple is unordered.
 
- - **Another Example Call:** `(contract-call?  .practice-map-keyword update-employee-status u10  false)`
+ - **Another Example Call:** `(ccontract-call?  .practice-map-keyword update-employee-status u10  false)`
 
  - **Result:** `(err  "ERR_EMPLOYEE_NOT_FOUND")` 
  This is because `u10` employee id does not exist in the Employees map.

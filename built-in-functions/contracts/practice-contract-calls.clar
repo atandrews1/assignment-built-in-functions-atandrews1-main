@@ -12,10 +12,20 @@
 
 
 (define-public (update-shipment (shipment-id uint) (status (string-ascii 10)))
- (ok "SUCCESS")
+ (let 
+ (
+    (caller tx-sender)
+ )
+ (as-contract (contract-call? .example update-status shipment-id status caller))
+ )
  )
 
 
  (define-read-only (read-shipment (shipment-id uint))
-    (ok "SUCCESS")
+    (let
+    (
+        (caller tx-sender)
+    ) 
+    (as-contract (contract-call? .example read-shipment shipment-id caller))
+    )
  )
